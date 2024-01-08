@@ -1,0 +1,11 @@
+IncreaseAnimationDistance > Activating IncreaseAnimationDistance...
+IncreaseAnimationDistance > Process name: eldenring.exe
+IncreaseAnimationDistance > Process ID: 7308
+IncreaseAnimationDistance > Process base address: 0x7FF7C8B10000
+IncreaseAnimationDistance > Pattern: 0xc7 ? ? ? 0x1 0x0 0x0 0x0 0xf3 ? 0xf 0x10 ? ? ? 0xf3 ? 0xf 0x10 ? ? ? 0xf3 0xf 0x59 ? ? ? ? ? ? 0xf 0x28 ? 0xf3 ? 0xf 0x5c ? ? 0x58 
+IncreaseAnimationDistance > Checking region: 00007FF7C8B10000
+IncreaseAnimationDistance > Found signature at 00007FF7C95F2C5F
+IncreaseAnimationDistance > Bytes at address: 0xf3 0x41? 0xf 0x5e 0x4c? 0x24? 0x54? 
+IncreaseAnimationDistance > New bytes: 0xf 0x57 0xc9 0x90 0x90 0x90 0x90 
+IncreaseAnimationDistance > Bytes match
+IncreaseAnimationDistance > Patch applied

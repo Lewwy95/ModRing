@@ -1,0 +1,24 @@
+UnlockTheFps > Activating UnlockTheFps...
+UnlockTheFps > FPS limit: 300.000000
+UnlockTheFps > Frametime: 0.003333
+UnlockTheFps > Process name: eldenring.exe
+UnlockTheFps > Process ID: 7308
+UnlockTheFps > Process base address: 0x7FF7C8B10000
+UnlockTheFps > Pattern: 0xc7 ? ? 0x89 0x88 0x88 0x3c 0xeb ? 0x89 ? 0x18 0xeb ? 0x89 ? 0x18 0xc7 
+UnlockTheFps > Checking region: 00007FF7C8B10000
+UnlockTheFps > Found signature at 00007FF7C995474F
+UnlockTheFps > Bytes at address: 0x89 0x88 0x88 0x3c 
+UnlockTheFps > New bytes: 0xd 0x74 0x5a 0x3b 
+UnlockTheFps > Bytes match
+UnlockTheFps > Patch applied
+UnlockTheFps > Removing 60 FPS fullscreen limit...
+UnlockTheFps > Process name: eldenring.exe
+UnlockTheFps > Process ID: 7308
+UnlockTheFps > Process base address: 0x7FF7C8B10000
+UnlockTheFps > Pattern: 0xc7 ? 0xef 0x3c 0x0 0x0 0x0 0xc7 ? 0xf3 0x1 0x0 0x0 0x0 
+UnlockTheFps > Checking region: 00007FF7C8B10000
+UnlockTheFps > Found signature at 00007FF7CA4B24F7
+UnlockTheFps > Bytes at address: 0xc7 0x45? 0xef 0x3c 0x0 0x0 0x0 0xc7 0x45? 0xf3 0x1 0x0 0x0 0x0 
+UnlockTheFps > New bytes: 0xc7 0x45 0xef 0x0 0x0 0x0 0x0 
+UnlockTheFps > Bytes match
+UnlockTheFps > Patch applied

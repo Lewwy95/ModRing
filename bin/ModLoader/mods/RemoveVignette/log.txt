@@ -1,0 +1,11 @@
+RemoveVignette > Activating RemoveVignette...
+RemoveVignette > Process name: eldenring.exe
+RemoveVignette > Process ID: 7308
+RemoveVignette > Process base address: 0x7FF7C8B10000
+RemoveVignette > Pattern: 0xf3 0xf 0x10 ? 0x50 0xf3 0xf 0x59 ? ? ? ? ? 0xe8 ? ? ? ? 0xf3 ? 0xf 0x5c ? 0xf3 ? 0xf 0x59 ? ? 0x8d ? ? 0xa0 0x0 0x0 0x0 
+RemoveVignette > Checking region: 00007FF7C8B10000
+RemoveVignette > Found signature at 00007FF7CA64FF85
+RemoveVignette > Bytes at address: 0xf3 0x45? 0xf 0x59 0xc2? 
+RemoveVignette > New bytes: 0xf3 0xf 0x5c 0xc0 0x90 
+RemoveVignette > Bytes match
+RemoveVignette > Patch applied
