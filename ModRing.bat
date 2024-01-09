@@ -110,6 +110,7 @@ echo Installation complete.
 echo.
 echo Please launch the game with "launchmod_eldenring.bat" in ModEngine folder...
 timeout /t 5 /nobreak >nul
+goto end
 
 :: No Widescreen
 :nowide
@@ -120,4 +121,5 @@ del /s /q "%~dp0..\mods\UltawideFix.dll"
 goto cleanup
 
 :: Finish
+:end
 endlocal
