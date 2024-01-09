@@ -8,7 +8,7 @@ ModRing provides the automation of installing and uninstalling quality of life m
 
 ## Installation
 
-Run the 'ModGate.bat' file. This will check for mod installation and install them if required.
+Run the 'ModRing.bat' file. This will check for mod installation and install them if required.
 
 You can add this file to Steam by right clicking the Elden Ring game executable and creating a shortcut.
 
@@ -32,7 +32,7 @@ Click the icon to change it to whatever you want. It will use the same image as 
 
 ## Usage
 
-Run ModGate from Steam after following the installation steps.
+Run ModRing from Steam after following the installation steps.
 
 ## Contributions
 
