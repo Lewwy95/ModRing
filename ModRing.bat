@@ -116,8 +116,8 @@ goto end
 :nowide
 rmdir /s /q "%~dp0..\ModEngine\mod\menu\win"
 del /s /q "%~dp0..\ModEngine\mod\menu\*.gfx"
-rmdir /s /q "%~dp0..\mods\UltawideFix"
-del /s /q "%~dp0..\mods\UltawideFix.dll"
+rmdir /s /q "%~dp0..\mods\UltrawideFix"
+del /s /q "%~dp0..\mods\UltrawideFix.dll"
 goto cleanup
 
 :: Finish
