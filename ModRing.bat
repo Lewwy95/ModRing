@@ -89,11 +89,19 @@ copy "%~dp0\bin\ModLoader\mod_loader_config.ini" "%~dp0..\"
 xcopy /s /y "%~dp0\bin\ModLoader\Mods\*" "%~dp0..\mods"
 cls
 
-:: Clear 'Temp' Folder
+:: Widescreen Checker
+powershell.exe Get-WmiObject win32_videocontroller | find "CurrentHorizontalResolution" > resChecker.txt
+powershell.exe Get-WmiObject win32_videocontroller | find "CurrentVerticalResolution" >> resChecker.txt
+for /f "tokens=1-2 delims=^:^ " %%a in (resChecker.txt) do set %%a=%%b
+if %CurrentHorizontalResolution% neq 3440 goto nowide
+
+:: Clean Up
+:cleanup
 echo Cleaning up...
 del /s /q "%~dp0\bin\Temp\*"
 rmdir /s /q "%~dp0\bin\Temp"
 mkdir "%~dp0\bin\Temp"
+del "%~dp0\resChecker.txt"
 cls
 
 :: Launch Game
@@ -102,6 +110,14 @@ echo Installation complete.
 echo.
 echo Please launch the game with "launchmod_eldenring.bat" in ModEngine folder...
 timeout /t 5 /nobreak >nul
+
+:: No Widescreen
+:nowide
+rmdir /s /q "%~dp0..\ModEngine\mod\menu\win"
+del /s /q "%~dp0..\ModEngine\mod\menu\*.gfx"
+rmdir /s /q "%~dp0..\mods\UltawideFix"
+del /s /q "%~dp0..\mods\UltawideFix.dll"
+goto cleanup
 
 :: Finish
 endlocal
