@@ -106,10 +106,10 @@ cls
 
 :: Launch Game
 :launch
-echo Installation complete.
-echo.
-echo Please launch the game with "launchmod_eldenring.bat" in ModEngine folder...
-timeout /t 5 /nobreak >nul
+echo Launching ModRing...
+timeout /t 2 /nobreak >nul
+cd "%~dp0..\ModEngine"
+call "%~dp0..\ModEngine\launchmod_eldenring.bat"
 goto end
 
 :: No Widescreen
