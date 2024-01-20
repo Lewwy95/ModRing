@@ -1,6 +1,6 @@
 Is the game launching with a white screen and no mods?
 
-If so, copy the two files from 'bin/MissingFiles' into your "ELDEN RING/Game" folder.
+If so, unzip and copy the two files from 'bin/MissingFiles' into your "ELDEN RING/Game" folder.
 
 Now launch with ModRing.
 
