@@ -9,6 +9,7 @@ set /p current=<version.txt
 
 :: Get Latest Version File
 echo Comparing versions...
+timeout /t 1 /nobreak >nul
 type NUL > "%~dp0\bin\Temp\version_new.txt"
 powershell -c "(Invoke-WebRequest -URI 'https://raw.githubusercontent.com/Lewwy95/ModRing/main/version.txt').Content | Set-Content -Path '%~dp0\bin\Temp\version_new.txt'"
 cls
@@ -48,16 +49,19 @@ goto install
 :: Installation/Updater
 :install
 echo Downloading latest revision...
+timeout /t 1 /nobreak >nul
 powershell -c "(New-Object System.Net.WebClient).DownloadFile('https://github.com/Lewwy95/ModRing/archive/refs/heads/main.zip','%~dp0\bin\Temp\ModRing-main.zip')"
 cls
 
 :: Extract Latest Revision
 echo Extracting latest revision...
+timeout /t 1 /nobreak >nul
 powershell -c "Expand-Archive '%~dp0\bin\Temp\ModRing-main.zip' -Force '%~dp0\bin\Temp'"
 cls
 
 :: Deploy Latest Revision
 echo Deploying latest revision...
+timeout /t 1 /nobreak >nul
 xcopy /s /y "%~dp0\bin\Temp\ModRing-main" "%~dp0"
 cls
 
@@ -71,7 +75,7 @@ call "%~dp0\Uninstall.bat"
 
 :: Move New Mods
 echo Installing mods...
-timeout /t 2 /nobreak >nul
+timeout /t 1 /nobreak >nul
 if not exist "%~dp0..\SeamlessCoop" mkdir "%~dp0..\SeamlessCoop"
 copy "%~dp0\bin\SeamlessCoop\launch_elden_ring_seamlesscoop.exe" "%~dp0..\"
 xcopy /s /y "%~dp0\bin\SeamlessCoop\SeamlessCoop\*" "%~dp0..\SeamlessCoop"
@@ -99,16 +103,23 @@ if %CurrentHorizontalResolution% neq 3440 goto nowide
 :: Clean Up
 :cleanup
 echo Cleaning up...
+timeout /t 1 /nobreak >nul
 del /s /q "%~dp0\bin\Temp\*"
 rmdir /s /q "%~dp0\bin\Temp"
 mkdir "%~dp0\bin\Temp"
 del "%~dp0\resChecker.txt"
 cls
 
+:: Extract Missing Files
+echo Extracting missing files...
+timeout /t 1 /nobreak >nul
+powershell -c "Expand-Archive '%~dp0\bin\MissingFiles.zip' -Force '%~dp0..\'"
+cls
+
 :: Launch Game
 :launch
 echo Launching ModRing...
-timeout /t 2 /nobreak >nul
+timeout /t 1 /nobreak >nul
 cd "%~dp0..\ModEngine"
 call "%~dp0..\ModEngine\launchmod_eldenring.bat"
 goto end

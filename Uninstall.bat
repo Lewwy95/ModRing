@@ -3,7 +3,7 @@ setlocal
 
 :: Uninstall All Mods
 echo Uninstalling current mods...
-timeout /t 2 /nobreak >nul
+timeout /t 1 /nobreak >nul
 
 :: Delete All Mods
 if exist "%~dp0..\mods" rmdir /s /q "%~dp0..\mods"
