@@ -71,6 +71,7 @@ call "%~dp0\Uninstall.bat"
 
 :: Move New Mods
 echo Installing mods...
+timeout /t 2 /nobreak >nul
 if not exist "%~dp0..\SeamlessCoop" mkdir "%~dp0..\SeamlessCoop"
 copy "%~dp0\bin\SeamlessCoop\launch_elden_ring_seamlesscoop.exe" "%~dp0..\"
 xcopy /s /y "%~dp0\bin\SeamlessCoop\SeamlessCoop\*" "%~dp0..\SeamlessCoop"
