@@ -89,9 +89,14 @@ if not exist "%~dp0..\mods\RemoveVignette" mkdir "%~dp0..\mods\RemoveVignette"
 if not exist "%~dp0..\mods\SkipTheIntro" mkdir "%~dp0..\mods\SkipTheIntro"
 if not exist "%~dp0..\mods\UltrawideFix" mkdir "%~dp0..\mods\UltrawideFix"
 if not exist "%~dp0..\mods\UnlockTheFps" mkdir "%~dp0..\mods\UnlockTheFps"
+if not exist "%~dp0..\reshade-shaders" mkdir "%~dp0..\reshade-shaders"
+if not exist "%~dp0..\reshade-presets" mkdir "%~dp0..\reshade-presets"
+xcopy /s /y "%~dp0\bin\Reshade\*" "%~dp0..\"
 copy "%~dp0\bin\ModLoader\dinput8.dll" "%~dp0..\"
 copy "%~dp0\bin\ModLoader\mod_loader_config.ini" "%~dp0..\"
 xcopy /s /y "%~dp0\bin\ModLoader\Mods\*" "%~dp0..\mods"
+del /s /q "%userprofile%\AppData\Roaming\EldenRing\GraphicsConfig.xml"
+copy "%~dp0\bin\Configs\Wide\GraphicsConfig.xml" "%userprofile%\AppData\Roaming\EldenRing"
 cls
 
 :: Widescreen Checker
@@ -130,6 +135,8 @@ rmdir /s /q "%~dp0..\ModEngine\mod\menu\win"
 del /s /q "%~dp0..\ModEngine\mod\menu\*.gfx"
 rmdir /s /q "%~dp0..\mods\UltrawideFix"
 del /s /q "%~dp0..\mods\UltrawideFix.dll"
+del /s /q "%userprofile%\AppData\Roaming\EldenRing\GraphicsConfig.xml"
+copy "%~dp0\bin\Configs\GraphicsConfig.xml" "%userprofile%\AppData\Roaming\EldenRing"
 goto cleanup
 
 :: Finish
